@@ -1,6 +1,6 @@
 export async function sendData(data) {
   try {
-    await fetch('http://back-end', {
+    await fetch('https://back-end', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
