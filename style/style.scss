@@ -1,0 +1,185 @@
+$prim-color: salmon;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.form {
+  position: relative;
+  margin: 0 auto;
+  width: 37.5rem;
+  padding: 3.5rem 2.5rem 1.5rem 2.5rem;
+
+  &__fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  &__input {
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border: 0.125rem solid $prim-color;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    color: $prim-color;
+
+    &:focus {
+      outline: 0.125rem solid $prim-color;
+    }
+
+    &::placeholder {
+      color: $prim-color;
+      opacity: 0.3;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__input,
+  &__input:hover,
+  &__input:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+  }
+
+  &__slider-container {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    pointer-events: none;
+
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 0.25rem;
+    }
+
+    &::-moz-range-track {
+      -moz-appearance: none;
+      height: 0.25rem;
+    }
+
+    &::-ms-track {
+      appearance: none;
+      height: 0.25rem;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      top: -0.675rem;
+      height: 1.7rem;
+      width: 1.7rem;
+      background-color: $prim-color;
+      border: 0.25rem solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: auto;
+      -webkit-appearance: none;
+      transition: 0.3s;
+    }
+
+    &::-moz-range-thumb {
+      position: relative;
+      top: -0.625rem;
+      height: 1.7rem;
+      width: 1.7rem;
+      background-color: $prim-color;
+      border: 0.25rem solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: auto;
+      -moz-appearance: none;
+      transition: 0.3s;
+    }
+
+    &::-ms-thumb {
+      position: relative;
+      top: -0.625rem;
+      height: 1.7rem;
+      width: 1.7rem;
+      background-color: $prim-color;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: auto;
+      appearance: none;
+    }
+
+    &:hover::-webkit-slider-thumb {
+      background-color: white;
+      border: 0.25rem solid $prim-color;
+    }
+
+    &:active::-webkit-slider-thumb {
+      transform: scale(1.2);
+    }
+
+    &:hover::-moz-range-thumb {
+      background-color: white;
+      border: 0.25rem solid $prim-color;
+    }
+
+    &:active::-moz-range-thumb {
+      transform: scale(1.2);
+    }
+  }
+
+  &__slider-track {
+    width: 100%;
+    height: 0.25rem;
+    background-color: #dedede;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 0.25rem;
+  }
+
+  &__button {
+    margin-top: 1rem;
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border: 0.125rem solid $prim-color;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: $prim-color;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
